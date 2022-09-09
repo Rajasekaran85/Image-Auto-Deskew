@@ -10,6 +10,7 @@ import re
 import glob
 import tifffile as tiff
 
+
 print("\n Image Auto-Deskew - TIFF & JPEG Format \n")
 print("\n Date: 07 September 2022 \n\n")
 
@@ -78,7 +79,7 @@ for tif_fname in glob.glob(filepath + "/" + "*.tif"):
 		io.imsave(output + "test-" + tif_filename, inverted_img.astype(np.uint8))
 		image3 = Image.open(output + "test-" + tif_filename)
 		bw_conv = image3.convert('1')       # converting into black and white
-		bw_conv.save(output + tif_filename, dpi=(tif_dpi_val,tif_dpi_val)) # for retaining the original dpi value
+		bw_conv.save(output + tif_filename, dpi=(tif_dpi_val,tif_dpi_val), compression=comp_img) # for retaining the original dpi & compression value 
 		image3.close()
 		os.remove(output + "test-" + tif_filename)
 
@@ -89,7 +90,7 @@ for tif_fname in glob.glob(filepath + "/" + "*.tif"):
 		tif_rotated = rotate(tif_image, tif_skew, resize=True) * 255
 		io.imsave(output + "test-" + tif_filename, tif_rotated.astype(np.uint8))
 		image3 = Image.open(output + "test-" + tif_filename)
-		image3.save(output + tif_filename, dpi=(tif_dpi_val,tif_dpi_val))
+		image3.save(output + tif_filename, dpi=(tif_dpi_val,tif_dpi_val), compression=comp_img)
 		image3.close()
 		os.remove(output + "test-" + tif_filename)
 
