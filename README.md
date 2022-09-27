@@ -1,6 +1,6 @@
 # Project Title
 
-Image Auto-Deskew - TIFF & JPEG Format
+Image Auto-Deskew - TIFF & JPEG Image Type
 
 ## Description
 
