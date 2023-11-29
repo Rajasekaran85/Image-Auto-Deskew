@@ -23,7 +23,7 @@ Image Auto-Deskew - TIFF & JPEG Image Type
 * Ask user to enter the path of the input image file
 * Tool will apply the deskew and output placed in the "De-Skew_output" folder
 
-### Help
+### Note
 * Group4 compression images will not apply the deskew, just write the error message on the text file
 
 
