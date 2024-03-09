@@ -1,4 +1,4 @@
-# Project Title
+# Application Title
 
 Image Auto-Deskew - TIFF & JPEG Image Type
 
